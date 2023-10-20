@@ -3,7 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import { Grid, Divider, Hidden,  Box, AppBar, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Language from "../../shared/Language";
-
+import logoAr from '../../assets/images/bosta_logo_ar.svg'
+import logoEN from '../../assets/images/bosta_logo_en.svg'
 const Navbar = (logoLang) => { 
   const [openMenu, setOpenMenu] = useState(false);
   const navbarRef = useRef();
@@ -38,12 +39,6 @@ const Navbar = (logoLang) => {
       };
     }
   }, [openMenu]);
-
-  const getLogoImagePath = (lang) => {
-    return `../../assets/images/bosta_${lang}.svg`;
-  };
-  const bostaLogoAr = getLogoImagePath("ar");
-  const bostaLogoEn = getLogoImagePath("en");
   return (
     <AppBar position="fixed" className="navbar" ref={navbarRef}>
       <Box style={{ borderBottom: "1px solid #ddd", padding: "18px 0" }}>
@@ -51,7 +46,7 @@ const Navbar = (logoLang) => {
           <Grid container justifyContent="flex-start" item xs={6} md={2}>
             <Link to="/" className="navbar-item">
               <img className="navbar-logo" 
-               src={logoLang === 'ar' ? bostaLogoAr : bostaLogoEn} 
+               src={logoLang === 'ar' ? logoAr : logoEN} 
                alt="bosta-logo" />
             </Link>
           </Grid>
