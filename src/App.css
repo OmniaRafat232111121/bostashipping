@@ -1,0 +1,64 @@
+#app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #fff !important;
+  box-shadow: none !important;
+}
+
+.navbar-item {
+  margin: 0 17px;
+  border-bottom: 5px solid transparent;
+}
+
+.navbar-item-active,
+.navbar-item-text:hover {
+  color: #ff0000;
+}
+
+.main-container {
+  padding-top: 100px;
+}
+
+.navbar-logo {
+  width: 120px;
+  vertical-align: middle;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-language {
+  color: #ff0000;
+  cursor: pointer;
+}
+
+.navbar-menu-icon {
+  color: #ff0000 !important;
+  padding: 6px !important;
+  margin: 0 17px !important;
+}
+
+.section-title {
+  font-size: 15;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#footer {
+  position: absolute;
+  width: 100%;
+  padding: 10px 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
