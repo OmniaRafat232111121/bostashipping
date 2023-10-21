@@ -37,9 +37,6 @@ List any prerequisites that users need to have installed. For example:
 - npm 
 
 ### Installation
-
-Provide step-by-step installation instructions. For example:
-
 1. Clone the repository:
 
    ```shell
