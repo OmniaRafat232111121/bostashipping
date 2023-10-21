@@ -6,7 +6,6 @@ import { Container, Hidden } from "@mui/material";
 import StatusBarHorizontal from "./StatusBarHorizontal";
 import ColorBar from "../shared/ColorBar";
 import Station from "../shared/Station";
-import StatusBarVertical from "./StatusBarVertical";
 
 const StatusBar = (props) => {
   // eslint-disable-next-line react/prop-types
@@ -52,9 +51,7 @@ const StatusBar = (props) => {
       <Hidden smDown>
         <StatusBarHorizontal {...statusBarProps} />
       </Hidden>
-      <Hidden smUp>
-        <StatusBarVertical {...statusBarProps} />
-      </Hidden>
+      
     </Container>
   );
 };

@@ -49,7 +49,7 @@ function App() {
 
       <Container className="main-container">
             <Routes>
-             <Route path="/" element={<Home />} />
+             <Route path="/"  element={<Home />} />
              <Route
                 path="/tracking-shipment/:trackingNum?"
                 exact

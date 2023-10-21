@@ -78,24 +78,24 @@ const Navbar = (logoLang) => {
           <Hidden mdDown>
             <Grid container justifyContent="center" item md={5}>
               <NavLink
-                activeClassName="navbar-item-active"
-                className="navbar-item navbar-link navbar-item-text"
+                className="navbar-item navbar-link navbar-item-text
+                navbar-item-active"
                 exact
                 to="/"
               >
                 {MAIN}
               </NavLink>
               <NavLink
-                activeClassName="navbar-item-active"
-                className="navbar-item navbar-link navbar-item-text"
+                className="navbar-item navbar-link navbar-item-text
+                navbar-item-active"
                 exact
                 to="/prices"
               >
                 {PRICES}
               </NavLink>
               <NavLink
-                activeClassName="navbar-item-active"
-                className="navbar-item navbar-link navbar-item-text"
+                className="navbar-item navbar-link navbar-item-text
+                navbar-item-active"
                 exact
                 to="/call-sales"
               >
@@ -104,8 +104,8 @@ const Navbar = (logoLang) => {
             </Grid>
             <Grid container justifyContent="flex-end" item md={5}>
               <NavLink
-                activeClassName="navbar-item-active"
-                className="navbar-item navbar-link navbar-item-text"
+                className="navbar-item navbar-link navbar-item-text
+                navbar-item-active"
                 to="/tracking-shipment"
                
                 
@@ -115,8 +115,9 @@ const Navbar = (logoLang) => {
            
               <Divider orientation="vertical" />
               <NavLink
-                activeClassName="navbar-item-active"
-                className="navbar-item navbar-link navbar-item-text"
+               
+                className="navbar-item navbar-link navbar-item-text 
+                navbar-item-active"
                 exact
                 to="/login"
               >
