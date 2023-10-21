@@ -35,18 +35,19 @@ ShipmentSlice: The project utilizes the Redux Toolkit and the "ShipmentSlice" co
 List any prerequisites that users need to have installed. For example:
 - Node.js 
 - npm 
-### ProjectSetup
-
-   ```shell
-         npm install
-
-###  ompile and Hot-Reload for Development
-
-   ```shell
-         npm run dev
 
 ### Installation
 1. Clone the repository:
 
    ```shell
       https://github.com/OmniaRafat232111121/bostashipping.git
+   
+### ProjectSetup
+
+    ```shell
+          npm install
+
+###  Compile and Hot-Reload for Development
+
+   ```shell
+         npm run dev
