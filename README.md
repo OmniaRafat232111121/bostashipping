@@ -40,4 +40,4 @@ List any prerequisites that users need to have installed. For example:
 1. Clone the repository:
 
    ```shell
- https://github.com/OmniaRafat232111121/bostashipping.git
+      https://github.com/OmniaRafat232111121/bostashipping.git
