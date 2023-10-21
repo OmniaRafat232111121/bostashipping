@@ -1,6 +1,7 @@
 
 import './App.css'
 import Header from './components/Header/Header'
+// import { redirect } from "react-router-dom";
 
 //rtl
 import rtlPlugin from "stylis-plugin-rtl";
@@ -12,6 +13,7 @@ import { Box, Container, ThemeProvider, createTheme } from '@mui/material';
 import LANGUAGE from "../src/shared/Language";
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
+import ShipmentTracking from './components/ShipmentTracking';
 
 /*---creating cache---*/
 // Create rtl cache
@@ -48,6 +50,12 @@ function App() {
       <Container className="main-container">
             <Routes>
              <Route path="/" element={<Home />} />
+             <Route
+                path="/tracking-shipment/:trackingNum?"
+                exact
+                element={<ShipmentTracking/>}
+              />
+              <Route render={() => <redirect to="/" />} />
             </Routes>
           </Container>
 

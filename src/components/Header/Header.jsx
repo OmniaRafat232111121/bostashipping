@@ -5,22 +5,20 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Language from "../../shared/Language";
 import logoAr from '../../assets/images/bosta_logo_ar.svg'
 import logoEN from '../../assets/images/bosta_logo_en.svg'
+import HeaderResponsive from "./HeaderResponsive";
+
 const Navbar = (logoLang) => { 
   const [openMenu, setOpenMenu] = useState(false);
   const navbarRef = useRef();
   const { MAIN, PRICES, CALL_SALES, TRACK_SHIPMENT,LOGIN } = Language.MENU;
 
-  const handleLanguageClick = () => {
-    if (Language.language === "ar") {
-      localStorage.setItem("userLanguage", "en");
-    } else if (Language.language === "en") {
-      localStorage.setItem("userLanguage", "ar");
-    }
-    window.location.reload(false);
-  };
 
  
-
+  const ChangeLanguage = () => {
+    const newLanguage = Language.language === "ar" ? "en" : "ar";
+    localStorage.setItem("userLanguage", newLanguage);
+    window.location.reload(false);
+  };
   const handleMenuIconClick = () => {
     setOpenMenu(!openMenu);
   };
@@ -39,9 +37,36 @@ const Navbar = (logoLang) => {
       };
     }
   }, [openMenu]);
+  const menuItems = [
+    {
+      title: MAIN,
+      link: "/",
+    },
+    {
+      title: PRICES,
+      link: "/prices",
+    },
+    {
+      title: CALL_SALES,
+      link: "/call-sales",
+    },
+    {
+      title: TRACK_SHIPMENT,
+      link: "/tracking-shipment",
+    },
+    {
+      title: LOGIN,
+      link: "/login",
+    },
+    {
+      title:Language.language === "ar" ? "ENG" : "عربي",
+      onClick: ChangeLanguage,
+    },
+  ];
   return (
     <AppBar position="fixed" className="navbar" ref={navbarRef}>
-      <Box style={{ borderBottom: "1px solid #ddd", padding: "18px 0" }}>
+      <Box style={{  padding: "18px 0",
+      position:'relative' }}>
         <Grid container maxWidth="lg" style={{ margin: "auto" }}>
           <Grid container justifyContent="flex-start" item xs={6} md={2}>
             <Link to="/" className="navbar-item">
@@ -82,9 +107,12 @@ const Navbar = (logoLang) => {
                 activeClassName="navbar-item-active"
                 className="navbar-item navbar-link navbar-item-text"
                 to="/tracking-shipment"
+               
+                
               >
                 {TRACK_SHIPMENT}
               </NavLink>
+           
               <Divider orientation="vertical" />
               <NavLink
                 activeClassName="navbar-item-active"
@@ -96,12 +124,16 @@ const Navbar = (logoLang) => {
               </NavLink>
               <Box
                 className="navbar-item navbar-link navbar-language"
-                onClick={handleLanguageClick}
+                onClick={ChangeLanguage}
               >
                 {Language.language === "ar" ? "ENG" : "عربي"}
               </Box>
             </Grid>
+          
+
           </Hidden>
+          
+          
           <Hidden mdUp>
             <Grid container justifyContent="flex-end" item xs={6}>
               <IconButton
@@ -114,9 +146,14 @@ const Navbar = (logoLang) => {
               </IconButton>
             </Grid>
           </Hidden>
+         
         </Grid>
+        
       </Box>
-      {/* <Hidden mdUp>{openMenu && <SmallDeviceMenu items={menuItems} />}</Hidden> */}
+      
+      <Hidden mdUp>{openMenu && <HeaderResponsive items={menuItems} />}</Hidden>
+   
+   
     </AppBar>
   );
 };

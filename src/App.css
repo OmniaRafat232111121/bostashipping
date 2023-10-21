@@ -62,3 +62,17 @@
   color: #fff;
   text-align: center;
 }
+
+
+.title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ccc;
+  margin: 5px 0;
+}
+
+.data {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 5px 0;
+}
