@@ -45,7 +45,7 @@ List any prerequisites that users need to have installed. For example:
       https://github.com/OmniaRafat232111121/bostashipping.git
 
 
-### Installation
+### Project Setup
 2. install this project:
 
     ```shell
@@ -56,5 +56,10 @@ List any prerequisites that users need to have installed. For example:
 
     ```shell
       npm run dev
+### Compile and Minify for Production
+4. run this project:
+
+    ```shell
+      npm run build
    
 
