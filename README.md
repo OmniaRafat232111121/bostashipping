@@ -15,7 +15,7 @@ This web application is designed for shipment tracking and management. It provid
 ### 1-Navigation
  The navigation bar at the top of the application provides quick links to essential sections, such as the main page, pricing, sales contacts, and user login. It also allows users to switch between English and Arabic languages.
 
- ### ShippingTrack
+ ### 2-ShippingTrack
 
 - Users can input a shipment tracking number into the search box. It validates the input and checks for errors.
 
@@ -23,10 +23,10 @@ This web application is designed for shipment tracking and management. It provid
 
 - Tracking Result: The application retrieves the shipment details associated with the provided tracking number and displays them to the user. Users can see the status and other information about the shipment.
 
-###  Language Switching
+###  3-Language Switching
 - Change Language: Users can switch between English and Arabic languages by clicking on the language button in the navigation bar.
 
-### StateMangement(Redux-Toolkit)
+### 4-StateMangement(Redux-Toolkit)
 ShipmentSlice: The project utilizes the Redux Toolkit and the "ShipmentSlice" component to manage the state of shipment-related data. This includes shipment details, loading status, errors, and the tracking number. Actions and reducers are defined to handle this data effectively.
 
 ### Prerequisites
