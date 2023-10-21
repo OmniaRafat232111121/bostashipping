@@ -7,13 +7,13 @@ This web application is designed for shipment tracking and management. It provid
 ## Technical
 - ReactJS
 - Redux-toolkit
-- MATERIUI
+- MATERI_UI
 - REACT_ROUTER_DOM
   
 
 ## How it works
 
-### NAvigation
+### Navigation
  The navigation bar at the top of the application provides quick links to essential sections, such as the main page, pricing, sales contacts, and user login. It also allows users to switch between English and Arabic languages.
 
  ### ShippingTrack
@@ -24,21 +24,17 @@ This web application is designed for shipment tracking and management. It provid
 
 - Tracking Result: The application retrieves the shipment details associated with the provided tracking number and displays them to the user. Users can see the status and other information about the shipment.
 
-## Features
+###  Language Switching
+- Change Language: Users can switch between English and Arabic languages by clicking on the language button in the navigation bar.
 
-List the key features of your project. For example:
-- Feature 1: Description
-- Feature 2: Description
-
-## Getting Started
-
-Explain how to get started with your project. Provide instructions on how to install, configure, and run it.
+### StateMangement(Redux-Toolkit)
+ShipmentSlice: The project utilizes the Redux Toolkit and the "ShipmentSlice" component to manage the state of shipment-related data. This includes shipment details, loading status, errors, and the tracking number. Actions and reducers are defined to handle this data effectively.
 
 ### Prerequisites
 
 List any prerequisites that users need to have installed. For example:
-- Node.js (version X.X.X)
-- npm (version X.X.X)
+- Node.js 
+- npm 
 
 ### Installation
 
@@ -47,4 +43,4 @@ Provide step-by-step installation instructions. For example:
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/yourusername/your-project.git
+ https://github.com/OmniaRafat232111121/bostashipping.git
