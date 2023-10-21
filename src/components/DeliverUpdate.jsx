@@ -23,6 +23,7 @@ const DeliverUpdate = (props) => {
   ? getDate_DD_Month_YY(new Date(shipmentDetails.PromisedDate))
   : Language.SHIPMENT_TRACKING.NOT_DETERMINED;
   
+  
   return (
     <Container
       style={{
@@ -36,28 +37,23 @@ const DeliverUpdate = (props) => {
         <ItemBar
           title={`${Language.SHIPMENT_TRACKING.TRACKING_NUMBER} ${shipmentDetails.TrackingNumber}`}
           data={Language.SHIPMENT_STATE[shipmentDetails.CurrentStatus.state]}
-          style={{ color: ColorBar[shipmentDetails.CurrentStatus.state] ,
-            fontSize: '20px',
-      }}
+          style={{ color: ColorBar[shipmentDetails.CurrentStatus.state] }}
         />
-
         <ItemBar
           title={Language.SHIPMENT_TRACKING.LAST_UPDATE}
           data={lastUpdate}
         />
-       <ItemBar
+        <ItemBar
           title={Language.SHIPMENT_TRACKING.SELLER_NAME}
           data={sellerName}
         />
-         <ItemBar
+        <ItemBar
           title={Language.SHIPMENT_TRACKING.PROMISED_DATE}
           data={promiseDate}
         />
       </Grid>
       <Divider variant="fullWidth" />
-
       <StatusBar transitEvents={transitEvents} />
-
     </Container>
   );
 };
