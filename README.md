@@ -1,10 +1,13 @@
-# Your Project Name
+# ShippingBosta
 
-Brief description of your project.
+This web application is designed for shipment tracking and management. It provides users with the ability to track shipments, view shipment details, and manage the shipment process. The application is built using React, Redux Toolkit, and Material-UI for the front end and includes several components for tracking shipments, searching for shipments, and managing user interactions.
+
+![task](https://github.com/OmniaRafat232111121/bostashipping/assets/76200523/48cf0be3-496c-44b3-af6d-6a890df4683e)
 
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
+
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
