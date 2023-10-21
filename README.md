@@ -12,7 +12,7 @@ This web application is designed for shipment tracking and management. It provid
 
 ## How it works
 
-### Navigation
+### 1-Navigation
  The navigation bar at the top of the application provides quick links to essential sections, such as the main page, pricing, sales contacts, and user login. It also allows users to switch between English and Arabic languages.
 
  ### ShippingTrack
