@@ -36,10 +36,25 @@ List any prerequisites that users need to have installed. For example:
 - Node.js 
 - npm 
 
+
+    
 ### Installation
 1. Clone the repository:
 
     ```shell
       https://github.com/OmniaRafat232111121/bostashipping.git
+
+
+### Installation
+2. install this project:
+
+    ```shell
+      npm install
+
+### Compile and Hot-Reload for Development
+3. run this project:
+
+    ```shell
+      npm run dev
    
 
