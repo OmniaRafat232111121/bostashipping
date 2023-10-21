@@ -6,7 +6,6 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Language from "../shared/Language";
 import Station from "../shared/Station";
 
-
 const StatusBarHorizontal = (props) => {
   // eslint-disable-next-line react/prop-types
   const { bgColor, lastState } = props;
@@ -73,28 +72,28 @@ const StatusBarHorizontal = (props) => {
   };
 
   return (
-    <Container style={{marginTop: 10}}>
-    <Grid container spacing={2}>
-      <StatusItem state="PACKAGE_RECEIVED" hasFirst />
-      <StatusItem state="OUT_FOR_DELIVERY" />
-      <StatusItem state="DELIVERED" />
-    </Grid>
-    <Grid container style={{ paddingTop: 20 }} spacing={3}>
-      <StatusText text="TICKET_CREATED" />
-      <StatusText
-        text="PACKAGE_RECEIVED"
-        style={{ textAlign: Language.language === "ar" ? "right" : "left" }}
-      />
-      <StatusText
-        text="OUT_FOR_DELIVERY"
-        style={{ textAlign: Language.language === "ar" ? "left" : "right" }}
-      />
-      <StatusText
-        text="DELIVERED"
-        style={{ textAlign: Language.language === "ar" ? "left" : "right" }}
-      />
-    </Grid>
-  </Container>
+    <Container style={{ marginTop: 10 }}>
+      <Grid container spacing={2}>
+        <StatusItem state="PACKAGE_RECEIVED" hasFirst />
+        <StatusItem state="OUT_FOR_DELIVERY" />
+        <StatusItem state="DELIVERED" />
+      </Grid>
+      <Grid container style={{ paddingTop: 20 }} spacing={3}>
+        <StatusText text="TICKET_CREATED" />
+        <StatusText
+          text="PACKAGE_RECEIVED"
+          style={{ textAlign: Language.language === "ar" ? "right" : "left" }}
+        />
+        <StatusText
+          text="OUT_FOR_DELIVERY"
+          style={{ textAlign: Language.language === "ar" ? "left" : "right" }}
+        />
+        <StatusText
+          text="DELIVERED"
+          style={{ textAlign: Language.language === "ar" ? "left" : "right" }}
+        />
+      </Grid>
+    </Container>
   );
 };
 

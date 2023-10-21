@@ -7,12 +7,6 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Language from "../shared/Language";
 import Station from "../shared/Station";
 
-// import CreateIcon from "@mui/icons-material/Create";
-// import StoreIcon from "@mui/icons-material/Store";
-// import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-// import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
-
-
 const StatusBarVertical = (props) => {
   const { generalBgColor, lastState } = props;
 

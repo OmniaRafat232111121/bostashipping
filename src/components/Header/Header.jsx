@@ -1,19 +1,17 @@
-import  { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Grid, Divider, Hidden,  Box, AppBar, IconButton } from "@mui/material";
+import { Grid, Divider, Hidden, Box, AppBar, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Language from "../../shared/Language";
-import logoAr from '../../assets/images/bosta_logo_ar.svg'
-import logoEN from '../../assets/images/bosta_logo_en.svg'
+import logoAr from "../../assets/images/bosta_logo_ar.svg";
+import logoEN from "../../assets/images/bosta_logo_en.svg";
 import HeaderResponsive from "./HeaderResponsive";
 
-const Navbar = (logoLang) => { 
+const Navbar = (logoLang) => {
   const [openMenu, setOpenMenu] = useState(false);
   const navbarRef = useRef();
-  const { MAIN, PRICES, CALL_SALES, TRACK_SHIPMENT,LOGIN } = Language.MENU;
+  const { MAIN, PRICES, CALL_SALES, TRACK_SHIPMENT, LOGIN } = Language.MENU;
 
-
- 
   const ChangeLanguage = () => {
     const newLanguage = Language.language === "ar" ? "en" : "ar";
     localStorage.setItem("userLanguage", newLanguage);
@@ -24,7 +22,11 @@ const Navbar = (logoLang) => {
   };
 
   const closeMenu = (e) => {
-    if (openMenu && navbarRef.current && !navbarRef.current.contains(e.target)) {
+    if (
+      openMenu &&
+      navbarRef.current &&
+      !navbarRef.current.contains(e.target)
+    ) {
       setOpenMenu(false);
     }
   };
@@ -59,20 +61,21 @@ const Navbar = (logoLang) => {
       link: "/login",
     },
     {
-      title:Language.language === "ar" ? "ENG" : "عربي",
+      title: Language.language === "ar" ? "ENG" : "عربي",
       onClick: ChangeLanguage,
     },
   ];
   return (
     <AppBar position="fixed" className="navbar" ref={navbarRef}>
-      <Box style={{  padding: "18px 0",
-      position:'relative' }}>
+      <Box style={{ padding: "18px 0", position: "relative" }}>
         <Grid container maxWidth="lg" style={{ margin: "auto" }}>
           <Grid container justifyContent="flex-start" item xs={6} md={2}>
             <Link to="/" className="navbar-item">
-              <img className="navbar-logo" 
-               src={logoLang === 'ar' ? logoAr : logoEN} 
-               alt="bosta-logo" />
+              <img
+                className="navbar-logo"
+                src={logoLang === "ar" ? logoAr : logoEN}
+                alt="bosta-logo"
+              />
             </Link>
           </Grid>
           <Hidden mdDown>
@@ -107,15 +110,12 @@ const Navbar = (logoLang) => {
                 className="navbar-item navbar-link navbar-item-text
                 navbar-item-active"
                 to="/tracking-shipment"
-               
-                
               >
                 {TRACK_SHIPMENT}
               </NavLink>
-           
+
               <Divider orientation="vertical" />
               <NavLink
-               
                 className="navbar-item navbar-link navbar-item-text 
                 navbar-item-active"
                 exact
@@ -130,11 +130,8 @@ const Navbar = (logoLang) => {
                 {Language.language === "ar" ? "ENG" : "عربي"}
               </Box>
             </Grid>
-          
-
           </Hidden>
-          
-          
+
           <Hidden mdUp>
             <Grid container justifyContent="flex-end" item xs={6}>
               <IconButton
@@ -147,14 +144,10 @@ const Navbar = (logoLang) => {
               </IconButton>
             </Grid>
           </Hidden>
-         
         </Grid>
-        
       </Box>
-      
+
       <Hidden mdUp>{openMenu && <HeaderResponsive items={menuItems} />}</Hidden>
-   
-   
     </AppBar>
   );
 };

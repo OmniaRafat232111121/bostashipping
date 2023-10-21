@@ -3,8 +3,7 @@ import React from "react";
 import { Box, Paper } from "@mui/material";
 import Language from "../shared/Language";
 
-
-const Delivery= () => {
+const Delivery = () => {
   const { DELIVERY_ADDRESS, NOT_DETERMINED } = Language.SHIPMENT_TRACKING;
   return (
     <React.Fragment>

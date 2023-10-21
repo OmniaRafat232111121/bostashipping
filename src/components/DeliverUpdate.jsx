@@ -8,7 +8,6 @@ import {
   getDate_DD_MM_YY,
   getTime,
   getDate_DD_Month_YY,
-
 } from "../shared/helperFunctions";
 import StatusBar from "./StatusBar";
 const DeliverUpdate = (props) => {
@@ -20,10 +19,9 @@ const DeliverUpdate = (props) => {
   } ${getTime(lastDate)}`;
   const sellerName = Language.SHIPMENT_TRACKING.NOT_DETERMINED;
   const promiseDate = shipmentDetails.PromisedDate
-  ? getDate_DD_Month_YY(new Date(shipmentDetails.PromisedDate))
-  : Language.SHIPMENT_TRACKING.NOT_DETERMINED;
-  
-  
+    ? getDate_DD_Month_YY(new Date(shipmentDetails.PromisedDate))
+    : Language.SHIPMENT_TRACKING.NOT_DETERMINED;
+
   return (
     <Container
       style={{

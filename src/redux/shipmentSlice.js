@@ -1,4 +1,5 @@
 // shipmentSlice.js
+
 import { createSlice } from '@reduxjs/toolkit';
 
 const shipmentSlice = createSlice({
@@ -7,6 +8,7 @@ const shipmentSlice = createSlice({
     shipmentDetails: null,
     loading: false,
     error: null,
+    trackingNum: '',
   },
   reducers: {
     setShipmentDetails: (state, action) => {
@@ -18,6 +20,9 @@ const shipmentSlice = createSlice({
     setError: (state, action) => {
       state.error = action.payload;
     },
+    setTrackingNum: (state, action) => {
+      state.trackingNum = action.payload; 
+    },
   },
 });
 
@@ -25,6 +30,7 @@ export const {
   setShipmentDetails,
   setLoading,
   setError,
+  setTrackingNum, 
 } = shipmentSlice.actions;
 
 export default shipmentSlice.reducer;
