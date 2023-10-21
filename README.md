@@ -7,7 +7,7 @@ This web application is designed for shipment tracking and management. It provid
 ## Technical
 - ReactJS
 - Redux-toolkit
-- MATERI_UI
+- Material-UI
 - REACT_ROUTER_DOM
   
 
