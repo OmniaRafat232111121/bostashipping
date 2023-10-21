@@ -4,20 +4,25 @@ This web application is designed for shipment tracking and management. It provid
 
 ![task](https://github.com/OmniaRafat232111121/bostashipping/assets/76200523/48cf0be3-496c-44b3-af6d-6a890df4683e)
 
-## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
+## Technical
+- ReactJS
+- Redux-toolkit
+- MATERIUI
+- REACT_ROUTER_DOM
+  
 
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+## How it works
 
-## Overview
+### NAvigation
+ The navigation bar at the top of the application provides quick links to essential sections, such as the main page, pricing, sales contacts, and user login. It also allows users to switch between English and Arabic languages.
 
-Provide a brief overview of your project. Explain what it does, why it exists, and what problems it solves. You can also mention the technologies or libraries used.
+ ### ShippingTrack
+
+- Users can input a shipment tracking number into the search box. It validates the input and checks for errors.
+
+- Search Icon: After entering the tracking number, clicking the search icon initiates the search process.
+
+- Tracking Result: The application retrieves the shipment details associated with the provided tracking number and displays them to the user. Users can see the status and other information about the shipment.
 
 ## Features
 
