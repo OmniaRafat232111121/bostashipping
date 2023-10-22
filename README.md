@@ -9,6 +9,8 @@ This web application is designed for shipment tracking and management. It provid
 - Redux-toolkit
 - Material-UI
 - React-router-dom
+- Axios
+- stylis-plugin-rtl
 
 ## How it works
 
